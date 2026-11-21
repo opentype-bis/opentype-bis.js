@@ -35,7 +35,24 @@ export default [
       // and one never-assigned debug variable in hintingtt.mjs). Disabled to
       // avoid a wholesale rewrite; re-enable and clean up incrementally.
       "no-useless-assignment": "off",
-      "no-unassigned-vars": "off"
+      "no-unassigned-vars": "off",
+      // Node.js compatibility guard: the library must run in Node as well as the
+      // browser, so these browser-only globals (absent in Node) are forbidden in
+      // src. Browser-only features should feature-detect (e.g.
+      // `typeof window !== 'undefined'`) rather than reference them directly.
+      // NOTE: document/DOMParser/Image are intentionally *not* restricted — they
+      // are used in the browser-only SVG color-glyph path (src/svgimages.mjs).
+      "no-restricted-globals": [
+        "error",
+        { "name": "window", "message": "Not available in Node.js — feature-detect with `typeof window !== 'undefined'` before use." },
+        { "name": "self", "message": "Not available in Node.js — feature-detect before use." },
+        { "name": "navigator", "message": "Not available in Node.js — feature-detect before use." },
+        { "name": "location", "message": "Not available in Node.js — feature-detect before use." },
+        { "name": "localStorage", "message": "Not available in Node.js — feature-detect before use." },
+        { "name": "sessionStorage", "message": "Not available in Node.js — feature-detect before use." },
+        { "name": "history", "message": "Not available in Node.js — feature-detect before use." },
+        { "name": "screen", "message": "Not available in Node.js — feature-detect before use." }
+      ]
     }
   },
   // Must come last: turns off ESLint formatting rules in favour of Prettier.
