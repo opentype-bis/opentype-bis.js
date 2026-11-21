@@ -36,8 +36,11 @@ describe('tables/cvar.mjs', function() {
         [2].forEach(n => {
             const font = fonts[`cvarTest${n}`];
             assert.deepEqual(font.tables.cvar.sharedPoints, [65, 66, 67, 85, 87, 93]);
+            // These headers carry no private point numbers, so they use the shared
+            // points — represented as `undefined` since the gvar fix (see parse.mjs:
+            // undefined = use shared, [] = use all points, [...] = those points).
             assert.deepEqual(font.tables.cvar.headers.map(h => h.privatePoints),
-                Array(11).fill([]));
+                Array(11).fill(undefined));
             assert.deepEqual(font.tables.cvar.headers.map(h => h.deltas.length),
                 Array(11).fill(font.tables.cvt.length));
         });
