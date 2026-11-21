@@ -22,6 +22,8 @@ jobs:
     - run: npm run build
     - run: npm run dist
     - run: mv dist docs
+    # ship the custom-domain file (opentype-bis.js.org) inside the Pages artifact
+    - run: cp CNAME docs/CNAME
     - uses: actions/configure-pages@v5
     - uses: actions/upload-pages-artifact@v3
       with:

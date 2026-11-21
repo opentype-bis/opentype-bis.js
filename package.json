@@ -1,10 +1,16 @@
 {
-  "name": "opentype.js",
-  "description": "OpenType font parser",
+  "name": "opentype-bis",
+  "description": "OpenType font parser and writer (independent fork of opentype.js)",
   "author": {
     "name": "Frederik De Bleser",
     "email": "frederik@debleser.be"
   },
+  "contributors": [
+    {
+      "name": "Wiltse Carpenter",
+      "email": "wiltse.carpenter@gmail.com"
+    }
+  ],
   "keywords": [
     "graphics",
     "fonts",
@@ -16,9 +22,13 @@
     "type"
   ],
   "license": "MIT",
+  "homepage": "https://opentype-bis.js.org/",
   "repository": {
     "type": "git",
-    "url": "git://github.com/opentypejs/opentype.js.git"
+    "url": "git+https://github.com/opentype-bis/opentype-bis.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/opentype-bis/opentype-bis.js/issues"
   },
   "main": "./dist/opentype.js",
   "browser": "./dist/opentype.js",

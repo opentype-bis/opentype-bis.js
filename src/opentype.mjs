@@ -1,7 +1,7 @@
-// opentype.js
-// https://github.com/opentypejs/opentype.js
-// (c) 2015 Frederik De Bleser
-// opentype.js may be freely distributed under the MIT license.
+// opentype-bis (independent fork of opentype.js)
+// https://github.com/opentype-bis/opentype-bis.js
+// (c) 2015 Frederik De Bleser, (c) 2026 Wiltse Carpenter and opentype-bis contributors
+// opentype-bis may be freely distributed under the MIT license.
 
 import { tinf_uncompress as inflate } from './tiny-inflate@1.0.3.esm.mjs'; // from code4fukui/tiny-inflate-es
 import Font from './font.mjs';

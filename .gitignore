@@ -1,5 +1,9 @@
 .idea/
+.vscode/
 *.iml
+*.swp
+*.save
+*.cursive
 .DS_Store
 /node_modules
 /dist

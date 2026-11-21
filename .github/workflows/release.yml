@@ -81,7 +81,7 @@ jobs:
           exit 1
         fi
 
-        if npm view "opentype.js@$VERSION" version >/dev/null 2>&1; then
+        if npm view "opentype-bis@$VERSION" version >/dev/null 2>&1; then
           echo "::error::npm version '$VERSION' already exists."
           exit 1
         fi

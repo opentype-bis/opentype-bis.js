@@ -1,15 +1,15 @@
 <div align="center">
-  <h1>opentype.js</h1>
-  <a href="https://www.npmjs.com/package/opentype.js"><img alt="Latest version on npm" src="https://img.shields.io/npm/v/opentype.js.svg?style=flat" /></a>
-  <a href="https://www.npmjs.com/package/opentype.js"><img alt="npm downloads, yearly" src="https://img.shields.io/npm/dy/opentype.js.svg?style=flat" /></a>
-  <a href="https://github.com/opentypejs/opentype.js/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/opentypejs/opentype.js" /></a>
-  <a href="https://github.com/opentypejs/opentype.js/actions/workflows/ci.yml?query=branch%3Amaster"><img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/opentypejs/opentype.js/ci.yml"></a>
+  <h1>opentype-bis</h1>
+  <a href="https://www.npmjs.com/package/opentype-bis"><img alt="Latest version on npm" src="https://img.shields.io/npm/v/opentype-bis.svg?style=flat" /></a>
+  <a href="https://www.npmjs.com/package/opentype-bis"><img alt="npm downloads, yearly" src="https://img.shields.io/npm/dy/opentype-bis.svg?style=flat" /></a>
+  <a href="https://github.com/opentype-bis/opentype-bis.js/blob/master/LICENSE"><img alt="MIT License" src="https://img.shields.io/github/license/opentype-bis/opentype-bis.js" /></a>
+  <a href="https://github.com/opentype-bis/opentype-bis.js/actions/workflows/ci.yml?query=branch%3Amaster"><img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/opentype-bis/opentype-bis.js/ci.yml"></a>
   <br /><br />
 </div>
 
-It gives you access to the **letterforms** of text from the browser or Node.js.
+**opentype-bis** is an independent, actively-maintained fork of [opentype.js](https://github.com/opentypejs/opentype.js) by Frederik De Bleser. It gives you access to the **letterforms** of text from the browser or Node.js.
 
-See [https://opentype.js.org/](https://opentype.js.org/) for a live demo.
+See [https://opentype-bis.js.org/](https://opentype-bis.js.org/) for a live demo.
 
 ## Features
 
@@ -30,9 +30,9 @@ See [https://opentype.js.org/](https://opentype.js.org/) for a live demo.
 
 Select one of the following sources in the next example:
 
-- https://opentype.js.org/dist/opentype.js
-- https://cdn.jsdelivr.net/npm/opentype.js
-- https://unpkg.com/opentype.js
+- https://opentype-bis.js.org/dist/opentype.js
+- https://cdn.jsdelivr.net/npm/opentype-bis
+- https://unpkg.com/opentype-bis
 
 ```html
 <!-- using global declaration -->
@@ -41,7 +41,7 @@ Select one of the following sources in the next example:
 
 <!-- using module declaration (need full path) -->
 <script type=module>
-import { parse } from "https://unpkg.com/opentype.js/dist/opentype.module.js";
+import { parse } from "https://unpkg.com/opentype-bis/dist/opentype.module.js";
 parse(...);
 </script>
 ```
@@ -49,26 +49,26 @@ parse(...);
 ### via [npm](http://npmjs.org/) package manager
 
 ```sh
-npm install opentype.js
+npm install opentype-bis
 ```
  
 ```js
-const opentype = require('opentype.js');
+const opentype = require('opentype-bis');
 
-import opentype from 'opentype.js'
+import opentype from 'opentype-bis'
 
-import { load } from 'opentype.js'
+import { load } from 'opentype-bis'
 ```
 
 Using TypeScript? [See this example](./docs/examples/typescript)
 
 ## Contribute
 
-If you plan on improving or debugging opentype.js, you can:
+If you plan on improving or debugging opentype-bis, you can:
 
-- Fork the [opentype.js](https://github.com/opentypejs/opentype.js) repo
-- clone your fork `git clone git://github.com/yourname/opentype.js.git`
-- move into the project `cd opentype.js`
+- Fork the [opentype-bis.js](https://github.com/opentype-bis/opentype-bis.js) repo
+- clone your fork `git clone https://github.com/yourname/opentype-bis.js.git`
+- move into the project `cd opentype-bis.js`
 - install needed dependencies with `npm install`
 - make your changes
     - **option A:** for a simple build, use `npm run build`
@@ -78,7 +78,7 @@ If you plan on improving or debugging opentype.js, you can:
 
 ## Maintainer Releases
 
-Releases are published from the manual [Publish package to npm](https://github.com/opentypejs/opentype.js/actions/workflows/release.yml) workflow.
+Releases are published from the manual [Publish package to npm](https://github.com/opentype-bis/opentype-bis.js/actions/workflows/release.yml) workflow.
 
 1. Confirm the target version, for example `1.3.5`, and make sure `master` is green.
 2. Run the workflow from `master` with `dryRun: true` and `npmDistTag: latest`.
@@ -559,13 +559,16 @@ We use [SemVer](https://semver.org/) for versioning.
 
 ## License
 
-MIT
+MIT.
+
+opentype-bis is a fork of [opentype.js](https://github.com/opentypejs/opentype.js), originally created by **Frederik De Bleser** and its contributors, and is distributed under the same MIT license. The original copyright is retained in [LICENSE](./LICENSE). Enormous thanks to Frederik and everyone who built opentype.js — this project would not exist without their work.
 
 
 Thanks
 ======
-We would like to acknowledge the work of others without which opentype.js wouldn't be possible:
+We would like to acknowledge the work of others without which opentype-bis wouldn't be possible:
 
+* [opentype.js](https://github.com/opentypejs/opentype.js): the original library by Frederik De Bleser and contributors, which opentype-bis is forked from.
 * [pdf.js](https://mozilla.github.io/pdf.js/): for an awesome implementation of font parsing in the browser.
 * [FreeType](https://www.freetype.org/): for the nitty-gritty details and filling in the gaps when the spec was incomplete.
 * [ttf.js](https://ynakajima.github.io/ttf.js/demo/glyflist/): for hints about the TrueType parsing code.
@@ -574,4 +577,4 @@ We would like to acknowledge the work of others without which opentype.js wouldn
 * [tiny-inflate](https://github.com/foliojs/tiny-inflate): for WOFF decompression.
 * [Microsoft Typography](https://docs.microsoft.com/en-us/typography/opentype/spec/otff): the go-to reference for all things OpenType.
 * [Adobe Compact Font Format spec](http://download.microsoft.com/download/8/0/1/801a191c-029d-4af3-9642-555f6fe514ee/cff.pdf) and the [Adobe Type 2 Charstring spec](http://download.microsoft.com/download/8/0/1/801a191c-029d-4af3-9642-555f6fe514ee/type2.pdf): explains the data structures and commands for the CFF glyph format.
-* All [contributors](https://github.com/opentypejs/opentype.js/graphs/contributors).
+* All [opentype-bis contributors](https://github.com/opentype-bis/opentype-bis.js/graphs/contributors) and the [original opentype.js contributors](https://github.com/opentypejs/opentype.js/graphs/contributors).

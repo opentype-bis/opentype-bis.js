@@ -1,6 +1,6 @@
 /**
- * @fileoverview Closure Compiler externs for opentype.js version.
- * @see http://opentype.js.org/
+ * @fileoverview Closure Compiler externs for opentype-bis version.
+ * @see https://opentype-bis.js.org/
  * @externs
  */
 
