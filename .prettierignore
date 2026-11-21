@@ -1,0 +1,15 @@
+# Build output
+dist
+/docs/dist
+
+# Dependencies and lockfiles
+node_modules
+package-lock.json
+
+# Generated / vendored / minified
+*.min.js
+*.min.mjs
+externs
+
+# Demo site scripts and assets are hand-maintained
+/docs/*.js
